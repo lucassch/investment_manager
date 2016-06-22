@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: investment_manager_development
+
+test:
+  <<: *default
+  database: investment_manager_test
+
+production:
+  <<: *default
+  database: investment_manager_production
