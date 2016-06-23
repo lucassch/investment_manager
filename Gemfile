@@ -13,7 +13,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'materialize-sass'
 gem 'material_icons'
 
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -23,8 +22,7 @@ gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
@@ -35,6 +33,10 @@ gem "omniauth-google-oauth2"
 gem 'devise'
 
 gem "figaro"
+
+gem "enumerate_it"
+
+gem 'route_translator'
 
 
 group :development, :test do

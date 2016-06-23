@@ -3,40 +3,47 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Investment Manager</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Gerenciador de investimentos</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Investment Manager</a>
-      <ul class="right hide-on-med-and-down">
-        <li>
-          <% if current_user %>
-            <%= link_to "Sair", destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to "Entrar", new_user_session_path %>
-          <% end %>
-        </li>
-      </ul>
+  <header>
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <%= link_to "Gerenciador de investimentos", root_path, id: "logo-container", class: "brand-logo" %>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <% if current_user %>
+              <%= link_to "Sair", destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= link_to "Entrar", new_user_session_path %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <% if current_user %>
+        <%= render 'layouts/menu' %>
+      <% end %>
+      <%= yield %>
     </div>
-  </nav>
-  <div class="container">
-    <%= yield %>
-  </div>
-
-  <footer class="page-footer orange">
+  </main>
+  <footer class="page-footer blue">
     <div class="footer-copyright">
       <div class="container">
-      Criado por <a class="orange-text text-lighten-3" href="github.com/lucassch">Lucas</a>
+      Criado por <a class="blue-text text-lighten-3" href="github.com/lucassch">Lucas</a>
       </div>
     </div>
   </footer>
-<script type="text/javascript">
-<% flash.each do |key, value| %>
-  Materialize.toast('<%= value %>', 5000);
-<% end %>
-</script>
+  <script type="text/javascript">
+  <% flash.each do |key, value| %>
+    Materialize.toast('<%= value %>', 5000);
+  <% end %>
+  </script>
 </body>
 </html>

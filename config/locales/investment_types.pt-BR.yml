@@ -1,0 +1,9 @@
+pt-BR:
+  enumerations:
+    investment_types:
+      poupanca: "Poupança"
+      renda_fixa_lci: "Renda fixa - LCI"
+      renda_fixa_lca: "Renda fixa - LCA"
+      renda_fixa_lc: "Renda fixa - LC"
+      renda_fixa_cdb: "Renda fixa - CDB"
+      tesouro_direto: "Renda fixa - Tesouro direto"

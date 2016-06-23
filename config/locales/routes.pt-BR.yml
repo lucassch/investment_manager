@@ -1,0 +1,9 @@
+pt-BR:
+  routes:
+    new: "novo"
+    edit: "editar"
+    investments: "investimentos"
+    home: "inicio"
+    sign_in: "entrar"
+    users: "usuarios"
+    sign_out: "sair"

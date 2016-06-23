@@ -1,0 +1,21 @@
+<h4 class="header">Investimentos</h4>
+<%= link_to new_investment_path, class: "waves-effect waves-light btn right" do %>
+  <i class="material-icons left">add</i> Novo
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+        <th><%= Investment.human_attribute_name :description %></th>
+        <th><%= Investment.human_attribute_name :investment_type %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @investments.each do |investment| %>
+      <tr>
+        <td><%= investment %></td>
+        <td><%= investment.investment_type_humanize %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

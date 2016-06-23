@@ -1,0 +1,21 @@
+<% if current_user %>
+<div class="fixed-action-btn" style="bottom: 20px; right: 18px;">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">menu</i>
+  </a>
+  <ul>
+    <li>
+      <%= link_to investments_path, class: "btn-floating btn-large tooltipped green",
+          data: { position: "left", delay: "100", tooltip: t('menu.investments') } do %>
+        <i class="material-icons">account_balance</i>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: "btn-floating btn-large tooltipped blue darken-4",
+          data: { position: "left", delay: "100", tooltip: t('menu.home') } do %>
+        <i class="material-icons">home</i>
+      <% end %>
+    </li>
+  </ul>
+</div>
+<% end %>

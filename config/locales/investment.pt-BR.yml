@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      investment:
+        one: "Investimento"
+        other: "Investimentos"
+    attributes:
+      investment:
+        user_id: "Usuário"
+        user: "Usuário"
+        description: "Investimento"
+        investment_type: "Tipo de investimento"
